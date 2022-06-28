@@ -7,6 +7,7 @@ import java.awt.event.ActionListener;
 
 public class Ventana_AgregarEstudianteICC264 extends Ventana {
     DatosEstudiante datosEstudiante;
+    Ventana_CursoICC264 ventana_cursoICC264;
     JPanel panel;
     JLabel label1;
     JLabel label2;
@@ -59,6 +60,7 @@ public class Ventana_AgregarEstudianteICC264 extends Ventana {
             @Override
             public void actionPerformed(ActionEvent e) {
                 datosEstudiante.añadirEstudiante(textField1.getText(),textField2.getText(),textField3.getText());
+                ventana_cursoICC264.comboBox(textField1.getText());
             }
         });
 

@@ -6,7 +6,6 @@ import java.awt.event.ItemEvent;
 import javax.swing.*;
 
 public class Ventana_CursoICC264 extends Ventana {
-    Ventana ventana;
     JPanel panel;
     JLabel label1;
     JLabel label2;
@@ -23,10 +22,10 @@ public class Ventana_CursoICC264 extends Ventana {
 
     private void iniciarComponentes(){
         panelVentanas();
-        comboBox();
         etiquetasVentana();
         camposTextoVentana();
         botonesVentana();
+        Combo();
     }
 
     private void panelVentanas() {
@@ -64,7 +63,7 @@ public class Ventana_CursoICC264 extends Ventana {
     public void Combo(){
         setLayout(null);
         combo=new JComboBox<String>();
-        combo.setBounds(10,10,80,20);
+        combo.setBounds(10,10,100,20);
         add(combo);
         combo.addItem("20081365-0");
     }
@@ -74,15 +73,11 @@ public class Ventana_CursoICC264 extends Ventana {
             setTitle(seleccionado);
         }
     }
-    private void inic(){
-       Combo();
 
-    }
-
-    private void comboBox() {
+    public void comboBox(String Rut) {
         textField3=new JTextField(20);
         combo = new JComboBox();
-        combo.addItem("20081365-0");
+        combo.addItem(Rut);
         combo.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
